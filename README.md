@@ -1,6 +1,8 @@
 # Docker for certbot Let's Encrypt
 
-This instance is appropriate for one-off usage to generate SSL certificates with Let's encrypt service
+This instance is appropriate for one-off usage to generate SSL certificates or for using on separated port as microservice to retrieve SSL certificates from Let's encrypt service
+
+The generated certificates you can copy from docker container /etc/letsencrypt or share ot with other containers
 
 ## Usage
 
