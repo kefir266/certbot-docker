@@ -1,0 +1,14 @@
+version: '3'
+services:
+  cerbot-nginx:
+    container_name: certbot-nginx
+    build:
+      context: ./certbot
+    environment:
+      TARGET_DOMAIN: 'www.example.com'
+    volumes:
+      - ./certbot/etc/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./certbot/letencrypt:/etc/letencrypt:rw
+    ports:
+      - "80:80"
+      - "443:443"
